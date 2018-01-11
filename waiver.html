@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no'>
+    <title>Accept Trip #10706 - Powered by AddOns.LA</title>
+    <link rel='stylesheet' href="../../css/jquery-ui.min.css" />
+    <link rel='stylesheet' href="../../css/bootstrap.min.css" />
+    <link rel='stylesheet' href="../../css/artusmode.css" />
+    <script src="../../js/jquery-1.10.2.min.js"></script>
+    <script src="../../js/jquery-ui.min.js"></script>
+    <script src="../../thirdparty/signature-pad/jquery.signaturepad.js"></script>
+    <script src="../../thirdparty/signature-pad/assets/json2.min.js"></script>
+    <style>
+        table#trip_info {
+            border: none;
+            border-collapse: collapse;
+        }
+        table#trip_info th, table#trip_info td {
+            text-align: left;
+            border: none;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+        <div id="ribbon" class="nav-background color-theme min-ribbon">
+            <span class="ribbon-left">
+                <span id="logo" style="background-color: white !important;"><img src='https://yt074.addons.la/uploads/system/logo/qQ8Be43WX.png' /> </span>
+            </span>
+        </div><div id="content" class="pad-10">
+    <form action="save.php" method="post" class="sigPad" id="waiver_form" enctype="multipart/form-data">
+
+        <!-- Trip Summary -->
+
+        <div class="page" id="trip_summary">
+            <h1>Trip Summary</h1>
+            <table id="trip_info">
+                <tr><th>Trip Confirmation Number:</th><td>10706</td></tr>
+                <tr><th>Passenger Name:</th><td>CONTRACT TESTER</td></tr>                <tr><th>Passenger Email:</th><td>andy@kegbus.com</td></tr>                <tr><th>Passenger Phone:</th><td>+17038627734</td></tr>                <tr><th>Number of Passengers:</th><td>1</td></tr>                                                                <tr><th>Pick Up Time:</th><td>12:00am Jan 1st, 1970</td></tr>                                                <tr><th>Billing Contact:</th><td>Bill Con</td></tr>                <tr><th>Billing Account Number:</th><td>30004</td></tr>                                                                                                <tr><th>Trip Cost:</th><th>$120.00</th></tr>            </table>
+            <br/>
+            <a class="btn btn-default page_button" data-target="tos_accept">Next</a>
+        </div>
+
+        <!-- Accept and Sign -->
+
+        <div class="page hidden" id="tos_accept">
+            <h1>Accept and Sign</h1>
+
+            <div style="width: 100%; height: 300px; overflow-y: scroll;"><!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h2>All deposits are NON refundable. Company is not liable in the event of mechanical breakdown while on charter and will only be responsible for making up lost time at a mutually agreed date. The client assumes full financial liability for any damage to the limousine caused during the duration of the rental by them or any members of their party. A fee of 100.00 for each carpet or seat burn. Sanitation fee is 250.00. Alcohol Consumption and drug use is prohibited by law. Any fines will be paid for by the customer. The driver has the right to terminate run without refund (if there is blatant indiscretion on the part of the client(s)). It is Illegal to stand through the sunroof. Smoking is not permitted in some of our limousines and this is left to the discretion of the driver. Overtime pay will apply after the first 15 minutes of prearranged time described on the run sheet. Not responsible for delays or the termination in winter caused by unsafe road conditions (ie. not salted, accidents, etc.). Not responsible for articles left in the limousine. Balances to be paid to the driver on the run date before the beginning of the run. Vehicles cannot be loaded beyond seating capacity.</h2>
+</body>
+</html></div>
+
+            <input type="hidden" name="trip_id" value="62197655" />
+            <input type="hidden" name="trip_code" value="lPGs38Vji1Kg4KY" />
+            <input type="hidden" name="conf_number" value="10706" />
+
+            <div id="accept_wrapper">
+                <input type="checkbox" name="accept" id="accept" style="height: 30px; width: 30px; margin: 10px;" />
+                <label for="accept" class="font-18">Accept the Terms</label>
+            </div>
+
+            <div id="signature">
+                <div class="sig sigWrapper">
+                    <div class="typed"></div>
+                    <canvas class="pad" width="400" height="200"></canvas>
+                    <input type="hidden" name="signature" class="output">
+                </div>
+                <ul class="sigNav">
+                    <li class="btn clearButton"><a class="btn action highlight-color">Reset Signature</a></li>
+                </ul>
+            </div>
+
+            <br/>
+            <a class="btn btn-default page_button" data-target="trip_summary">Prev</a>
+            <a class="btn btn-default page_button" data-target="payment_information">Next</a>
+        </div>
+
+        <!-- Payment Information -->
+
+        <div class="page hidden" id="payment_information">
+            <h1>Payment Information</h1>
+
+            <label for="cc_name">Name on Credit Card</label><br/>
+            <input type="text" name="cc_name" id="cc_name" class="form-control" />
+
+            <label for="cc_street">Billing Street</label><br/>
+            <input type="text" name="cc_street" id="cc_street" class="form-control" />
+
+            <label for="cc_city">Billing City</label><br/>
+            <input type="text" name="cc_city" id="cc_city" class="form-control" />
+
+            <label for="cc_state">Billing State</label><br/>
+            <select name='cc_state' id='cc_state' class='form-control inline form-control'>
+							<option value='null'> - Choose - </option>
+							<option value='AL'>AL</option>
+						<option value='AK'>AK</option>
+						<option value='AZ'>AZ</option>
+						<option value='AR'>AR</option>
+						<option value='CA'>CA</option>
+						<option value='CO'>CO</option>
+						<option value='CT'>CT</option>
+						<option value='DE'>DE</option>
+						<option value='DC'>DC</option>
+						<option value='FL'>FL</option>
+						<option value='GA'>GA</option>
+						<option value='HI'>HI</option>
+						<option value='ID'>ID</option>
+						<option value='IL'>IL</option>
+						<option value='IN'>IN</option>
+						<option value='IA'>IA</option>
+						<option value='KS'>KS</option>
+						<option value='KY'>KY</option>
+						<option value='LA'>LA</option>
+						<option value='ME'>ME</option>
+						<option value='MD'>MD</option>
+						<option value='MA'>MA</option>
+						<option value='MI'>MI</option>
+						<option value='MN'>MN</option>
+						<option value='MS'>MS</option>
+						<option value='MO'>MO</option>
+						<option value='MT'>MT</option>
+						<option value='NE'>NE</option>
+						<option value='NV'>NV</option>
+						<option value='NH'>NH</option>
+						<option value='NJ'>NJ</option>
+						<option value='NM'>NM</option>
+						<option value='NY'>NY</option>
+						<option value='NC'>NC</option>
+						<option value='ND'>ND</option>
+						<option value='OH'>OH</option>
+						<option value='OK'>OK</option>
+						<option value='OR'>OR</option>
+						<option value='PA'>PA</option>
+						<option value='RI'>RI</option>
+						<option value='SC'>SC</option>
+						<option value='SD'>SD</option>
+						<option value='TN'>TN</option>
+						<option value='TX'>TX</option>
+						<option value='UT'>UT</option>
+						<option value='VT'>VT</option>
+						<option value='VA'>VA</option>
+						<option value='WA'>WA</option>
+						<option value='WV'>WV</option>
+						<option value='WI'>WI</option>
+						<option value='WY'>WY</option>
+						</select>
+            <label for="cc_zip">Billing Zip</label><br/>
+            <input type="text" name="cc_zip" id="cc_zip" class="form-control" />
+
+            <label for="cc_number">Credit Card Number</label><br/>
+            <input type="text" name="cc_number" id="cc_number" class="form-control" />
+
+            <label for="cc_exp_month">Credit Card Exp</label><br/>
+            <select id="cc_exp_month" name="cc_exp_month" class="form-control inline max-35p">
+                <option value="01">Jan</option>
+                <option value="02">Feb</option>
+                <option value="03">Mar</option>
+                <option value="04">Apr</option>
+                <option value="05">May</option>
+                <option value="06">Jun</option>
+                <option value="07">Jul</option>
+                <option value="08">Aug</option>
+                <option value="09">Sep</option>
+                <option value="10">Oct</option>
+                <option value="11">Nov</option>
+                <option value="12">Dec</option>
+            </select>
+            <span style="color: black;">/</span>
+            <select id="cc_exp_year" name="cc_exp_year" class="form-control inline max-50p">
+                			<option value='2017'>2017</option>
+			<option value='2018'>2018</option>
+			<option value='2019'>2019</option>
+			<option value='2020'>2020</option>
+			<option value='2021'>2021</option>
+			<option value='2022'>2022</option>
+			<option value='2023'>2023</option>
+			<option value='2024'>2024</option>
+			<option value='2025'>2025</option>
+			<option value='2026'>2026</option>
+            </select><br/>
+
+            <label for="cc_ccv">Credit Card CCV</label><br/>
+            <input type="number" step="1" name="cc_ccv" id="cc_ccv" class="form-control auto-width inline" /><br/>
+
+            <br/>
+            <a class="btn btn-default page_button" data-target="tos_accept">Prev</a>
+            <input type="submit" class="btn btn-default" value="Confirm Reservation" />
+        </div>
+
+    </form>
+
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+
+        jQuery(".page_button").click(function() {
+            jQuery(".page").each(function() {
+                if(!jQuery(this).hasClass("hidden")) jQuery(this).addClass("hidden");
+            });
+            jQuery("#"+jQuery(this).data('target')).removeClass("hidden");
+        });
+
+        jQuery('.sigPad').signaturePad({
+            drawOnly: true,
+            lineTop: 170
+        });
+
+        jQuery("#waiver_form").submit(function() {
+            var error = false;
+            var message = "You must fix the following errors:\n";
+
+            if(!jQuery("#accept").is(':checked')) {
+                error = true;
+                message += "\n - You must accept the terms and conditions.";
+            }
+
+            if(jQuery.trim(jQuery("#cc_name").val()) == "") {
+                error = true;
+                message += "\n - Your credit card name cannot be blank.";
+            }
+
+            if(jQuery.trim(jQuery("#cc_number").val()) == "") {
+                error = true;
+                message += "\n - Your credit card number cannot be blank.";
+            }
+
+            if(jQuery.trim(jQuery("#cc_exp_month").val()) == "") {
+                error = true;
+                message += "\n - Your credit card expiration month cannot be blank.";
+            }
+
+            if(jQuery.trim(jQuery("#cc_exp_year").val()) == "") {
+                error = true;
+                message += "\n - Your credit card expiration year cannot be blank.";
+            }
+
+            if(jQuery.trim(jQuery("#cc_ccv").val()) == "") {
+                error = true;
+                message += "\n - Your credit card CCV cannot be blank.";
+            }
+
+            if(error) {
+                alert(message);
+                return false;
+            }
+            else {
+                return true;
+            }
+        });
+
+    });
+</script>

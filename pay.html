@@ -1,0 +1,240 @@
+<html lang="en">
+<html>
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no'>
+
+    <link rel='stylesheet' href="https://yt074.addons.la/css/jquery-ui.min.css" />
+    <link rel='stylesheet' href="https://yt074.addons.la/css/bootstrap.min.css" />
+    <link rel='stylesheet' href="https://yt074.addons.la/css/artusmode.css" />
+	<link rel="stylesheet" href="C:\Users\Andrew\Desktop\WorkSpace\bootstrap\font-awesome-4.7.0\css\font-awesome.min.css">
+
+	
+	<script src="https://yt074.addons.la/js/jquery-1.10.2.min.js"></script>
+	<script src="https://yt074.addons.la/js/jquery-ui.min.js"></script>
+	<script src="https://yt074.addons.la/thirdparty/signature-pad/jquery.signaturepad.js"></script>
+	<script src="https://yt074.addons.la/thirdparty/signature-pad/assets/json2.min.js"></script>
+	
+	
+	<style>
+
+
+		/* For mobile phones: */
+		#payment_information{font-size:10px;}
+		#cc_name{width:90%; height:25px; border-radius: 4px; border:1px solid #cccccc; margin-left:5%}
+		#cc_street{width:90%; height:25px; border-radius: 4px; border:1px solid #cccccc; margin-left:5%}
+		#cc_city{width:90%; height:25px; border-radius: 4px; border:1px solid #cccccc; margin-left:5%}
+		#cc_state{width:90%; height:25px; border-radius: 4px; border:1px solid #cccccc; margin-left:5%; font-size:10px;}
+		#cc_zip{width:90%; height:25px; border-radius: 4px; border:1px solid #cccccc; margin-left:5%}
+		#cc_number{width:90%; height:25px; border-radius: 4px; border:1px solid #cccccc; margin-left:5%}
+		#cc_exp_month{width:90%; height:25px; border-radius: 4px; border:1px solid #cccccc; margin-left:5%; font-size:10px;}
+		#cc_exp_year{width:90%; height:25px; border-radius: 4px; border:1px solid #cccccc; margin-left:5%; font-size:10px;}
+		#cc_ccv{width:90%; height:25px; border-radius: 4px; border:1px solid #cccccc; margin-left:5%}
+		
+		
+		label[for="cc_name"] {margin-left:5%;}
+		label[for="cc_street"] {margin-left:5%;}
+		label[for="cc_city"] {margin-left:5%;}
+		label[for="cc_state"] {margin-left:5%;}
+		label[for="cc_zip"] {margin-left:5%;}
+		label[for="cc_number"] {margin-left:5%;}
+		label[for="cc_exp_month"] {margin-left:5%;}
+		label[for="cc_exp_year"] {margin-left:5%;}
+		label[for="cc_ccv"] {margin-left:5%;}
+		
+		.mybutton{background-color:red; color:white; border:none; margin:0 auto; display:block; border-radius:4px; padding:0px; width:80%; font-size:15px; font-weight:bold; height:30px;}
+		.my_button{background-color:#4CAF50; color:white; border:none; margin:0 auto; display:block; border-radius:4px; padding:15px; width:80%; font-size:15px; font-weight:bold;}
+		.card_icons{display:none}
+		
+		[class*="col-"] {
+			width: 100%;
+		}
+
+		[class*="col-"] {
+			float: left;
+			padding-left:10px;
+			width: 100%;
+			font-size:10px;
+			background-color:#e6e6e6;
+			/*border: 1px solid red;*/
+		}
+		.row::after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+
+		/* For desktop: */
+		@media only screen and (min-width: 768px) {
+		
+		#payment_information{font-size:10px;}
+		#cc_name{width:90%; height:35px; border-radius: 4px; border:1px solid #cccccc; margin-left:5%}
+		#cc_street{width:90%; height:35px; border-radius: 4px; border:1px solid #cccccc; margin-left:5%}
+		#cc_city{width:90%; height:35px; border-radius: 4px; border:1px solid #cccccc; margin-left:5%}
+		#cc_state{width:90%; height:35px; border-radius: 4px; border:1px solid #cccccc; margin-left:5%; font-size:15px;}
+		#cc_zip{width:90%; height:35px; border-radius: 4px; border:1px solid #cccccc; margin-left:5%}
+		#cc_number{width:90%; height:35px; border-radius: 4px; border:1px solid #cccccc; margin-left:5%}
+		#cc_exp_month{width:90%; height:35px; border-radius: 4px; border:1px solid #cccccc; margin-left:5%; font-size:15px;}
+		#cc_exp_year{width:90%; height:35px; border-radius: 4px; border:1px solid #cccccc; margin-left:5%; font-size:15px;}
+		#cc_ccv{width:90%; height:35px; border-radius: 4px; border:1px solid #cccccc; margin-left:5%}
+			
+			#payment_information{font-size:15px;}
+			.mybutton{background-color:red; color:white; border:none; margin-left:10%; display:block; border-radius:4px; padding:0px; width:8%; font-size:15px; font-weight:bold; height:30px; float:left;}
+			.my_button.my_button{border:none; padding:15px; width:20%; clear:left; margin-left:40%;}
+			.cardicons{display:none}
+			.card_icons{display:inline}
+			[class*="col-"] {
+				float: left;
+				padding:10px;
+				/*border: 1px solid red;*/
+				font-size:15px;
+			}
+		
+			.col-9{font-size:32px;}
+			.col-1 {width: 8.33%;}
+			.col-2 {width: 16.66%;}
+			.col-3 {width: 25%;}
+			.col-4 {width: 33.33%;}
+			.col-5 {width: 41.66%;}
+			.col-6 {width: 50%;}
+			.col-7 {width: 58.33%;}
+			.col-8 {width: 66.66%;}
+			.col-9 {width: 75%;}
+			.col-10 {width: 83.33%;}
+			.col-11 {width: 91.66%;}
+			.col-12 {width: 100%;}
+		}
+
+	</style>
+	
+	
+</head>
+<body>
+
+<div id="payment_information">
+			<img style="width:40%; display: block; margin:0 auto;" src='loggo.png' />
+            <h3  class="col-9" style="margin-top:0px; color:white; background-color:gray; width:100%">Payment Information</h3>
+			<hr style="border: 0 ;clear:both; display:block; width: 100%; background-color:#3333cc; height: 3px;">
+			
+			<div class="cardicons" style="width:100%;">
+				<div style="text-align:center;">
+				<img height="50" width="50" style=" display: block; display:inline-block;" src='visa-icon.png' />
+				<img height="50" width="50" style=" display: block; display:inline-block;" src='Master-card-icon.png' />
+				<img height="50" width="50" style=" display: block; display:inline-block;" src='discover-card.png' />
+				</div>
+			</div>
+			
+            <label for="cc_name">Name on Credit Card <i style="padding-right:5px;" class="fa fa-user-circle-o" aria-hidden="true"></i></label><br/>
+            <input type="text" name="cc_name" id="cc_name" />
+
+            <label for="cc_street">Billing Street <i class="fa fa-road" aria-hidden="true"></i></label><br/>
+            <input type="text" name="cc_street" id="cc_street" class="form-control" />
+
+            <label for="cc_city">Billing City <i class="fa fa-building" aria-hidden="true"></i></label><br/>
+            <input type="text" name="cc_city" id="cc_city" class="form-control" />
+
+            <label for="cc_state">Billing State <i class="fa fa-location-arrow" aria-hidden="true"></i></label><br/>
+            <select name='cc_state' id='cc_state' class='form-control inline form-control'>
+						<option value='null'> - Choose - </option>
+						<option value='AL'>AL</option>
+						<option value='AK'>AK</option>
+						<option value='AZ'>AZ</option>
+						<option value='AR'>AR</option>
+						<option value='CA'>CA</option>
+						<option value='CO'>CO</option>
+						<option value='CT'>CT</option>
+						<option value='DE'>DE</option>
+						<option value='DC'>DC</option>
+						<option value='FL'>FL</option>
+						<option value='GA'>GA</option>
+						<option value='HI'>HI</option>
+						<option value='ID'>ID</option>
+						<option value='IL'>IL</option>
+						<option value='IN'>IN</option>
+						<option value='IA'>IA</option>
+						<option value='KS'>KS</option>
+						<option value='KY'>KY</option>
+						<option value='LA'>LA</option>
+						<option value='ME'>ME</option>
+						<option value='MD'>MD</option>
+						<option value='MA'>MA</option>
+						<option value='MI'>MI</option>
+						<option value='MN'>MN</option>
+						<option value='MS'>MS</option>
+						<option value='MO'>MO</option>
+						<option value='MT'>MT</option>
+						<option value='NE'>NE</option>
+						<option value='NV'>NV</option>
+						<option value='NH'>NH</option>
+						<option value='NJ'>NJ</option>
+						<option value='NM'>NM</option>
+						<option value='NY'>NY</option>
+						<option value='NC'>NC</option>
+						<option value='ND'>ND</option>
+						<option value='OH'>OH</option>
+						<option value='OK'>OK</option>
+						<option value='OR'>OR</option>
+						<option value='PA'>PA</option>
+						<option value='RI'>RI</option>
+						<option value='SC'>SC</option>
+						<option value='SD'>SD</option>
+						<option value='TN'>TN</option>
+						<option value='TX'>TX</option>
+						<option value='UT'>UT</option>
+						<option value='VT'>VT</option>
+						<option value='VA'>VA</option>
+						<option value='WA'>WA</option>
+						<option value='WV'>WV</option>
+						<option value='WI'>WI</option>
+						<option value='WY'>WY</option>
+						</select>
+            <label for="cc_zip">Billing Zip <i class="fa fa-envelope" aria-hidden="true"></i></label><br/>
+            <input type="text" name="cc_zip" id="cc_zip" class="form-control" />
+
+            <label for="cc_number">Credit Card Number <i class="fa fa-credit-card-alt" aria-hidden="true"></i></label><br/>
+            <input type="text" name="cc_number" id="cc_number" class="form-control" />
+
+            <label for="cc_exp_month">Credit Card Exp <i class="fa fa-calendar" aria-hidden="true"></i></label><br/>
+            <select id="cc_exp_month" name="cc_exp_month" class="form-control inline max-35p">
+                <option value="01">Jan</option>
+                <option value="02">Feb</option>
+                <option value="03">Mar</option>
+                <option value="04">Apr</option>
+                <option value="05">May</option>
+                <option value="06">Jun</option>
+                <option value="07">Jul</option>
+                <option value="08">Aug</option>
+                <option value="09">Sep</option>
+                <option value="10">Oct</option>
+                <option value="11">Nov</option>
+                <option value="12">Dec</option>
+            </select>
+            <span style="color: black;">/</span>
+            <select id="cc_exp_year" name="cc_exp_year" class="form-control inline max-50p">
+                			<option value='2017'>2017</option>
+			<option value='2018'>2018</option>
+			<option value='2019'>2019</option>
+			<option value='2020'>2020</option>
+			<option value='2021'>2021</option>
+			<option value='2022'>2022</option>
+			<option value='2023'>2023</option>
+			<option value='2024'>2024</option>
+			<option value='2025'>2025</option>
+			<option value='2026'>2026</option>
+            </select><br/>
+
+            <label for="cc_ccv">Credit Card CCV <i class="fa fa-terminal" aria-hidden="true"></i></label><br/>
+            <input type="number" step="1" name="cc_ccv" id="cc_ccv"/><br/>
+
+            <br/>
+            <button class="mybutton" data-target="tos_accept" type="button" style="clear:both;">Prev</button>
+			<div class="card_icons">
+				<img height="50" width="50" style=" display: block; display:inline-block; margin-left:60%;" src='visa-icon.png' />
+				<img height="50" width="50" style=" display: block; display:inline-block;" src='Master-card-icon.png' />
+				<img height="50" width="50" style=" display: block; display:inline-block;" src='discover-card.png' />
+			</div>
+            <input type="submit" class="my_button" style="background-color:#4CAF50; color:white; border-radius:4px;" value="Confirm Reservation" />
+
+        </div>
+</body>
+</html>
+
